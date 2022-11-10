@@ -24,13 +24,15 @@ public class Account {
     }
 
     public void withdraw(int amount){
+        String threadName = Thread.currentThread().getName();
+
         if(amount <= this.balance){
             this.balance -= amount;
             this.amountWithdrawn += amount;
-            System.out.println(amount + " withdrawn. New balance " + this.balance + " Total Withdrawn: " + this.amountWithdrawn);
+            System.out.println(amount + " withdrawn by" + threadName + ". New balance " + this.balance + " Total Withdrawn: " + this.amountWithdrawn);
         }
         else{
-            System.out.println("Insufficient Funds. Total Withdrawn: " + this.amountWithdrawn);
+            System.out.println("Insufficient Funds for " + threadName + ". Total Withdrawn: " + this.amountWithdrawn);
         }
 
     }
