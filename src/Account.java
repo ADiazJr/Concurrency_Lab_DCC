@@ -1,7 +1,7 @@
 public class Account {
     //Instance Variables (HAS A)
     private int balance;
-    private String amountWithdrawn;
+    private int amountWithdrawn;
 
     public int getBalance() {
         return balance;
@@ -11,11 +11,11 @@ public class Account {
         this.balance = balance;
     }
 
-    public String getAmountWithdrawn() {
+    public int getAmountWithdrawn() {
         return amountWithdrawn;
     }
 
-    public void setAmountWithdrawn(String amountWithdrawn) {
+    public void setAmountWithdrawn(int amountWithdrawn) {
         this.amountWithdrawn = amountWithdrawn;
     }
 
